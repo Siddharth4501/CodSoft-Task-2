@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <section class="userpg">
+        <div class="userpanel">
+            
+            <div class="usercmn username">Welcome!!!! {{ request.user }}</div>
+            <div class="usercmn user-editprofile"><a href="">Edit your profile</a></div>            
+            <div class="usercmn user-mybooking"><a href="/mybooking">My Bookings</a></div>
+            <div class="usercmn user-weathercheck"><a href="">Check-Weather</a></div>  
+            <div class="usercmn user-logout">
+            <a href="{% url 'logout' %}">Logout</a>
+            </div>
+        </div>
+        
+
+        <div class="booking-container">
+            <div class="bookingvia">
+                <button class="book-flight-button">Book Flights Here !  </button><br><br>
+                <div class="travrelbackoption">
+                    <label for="One-Way">One-way</label>
+                    <input type="radio" name="Trip" id="One-way">
+                    <label for="Round-Trip">Round-Trip</label>
+                    <input type="radio" name="Trip" id="Round-Trip">
+                
+                    
+                </div><br>
+                <div class="flightin">
+                    <form method="post" action="{% url 'bkr' %}">
+                        {% csrf_token %}
+                        <label for="from">From:</label><br>
+                        <!-- <input type="text" id="from" name="from" placeholder="From..."> -->
+                        <select name="from" id="from" required>
+                            <option>select</option>
+                            <option value="Agra">Agra</option>
+                            
+                        </select><br>
+                        <label for="to">To:</label><br>
+                        <!-- <input type="text" id="to" name="to" placeholder="To..."> -->
+                        <select name="from" id="from" required>
+                            <option>select</option>
+                            <option value="Delhi">Delhi</option>
+                            
+                        </select><br>
+                        <label for="depart-date">Departure date:</label><br>
+                        <input type="date" name="depart-date" id="depart-date" required><br>
+                        <label for="return-date">Return date:</label><br>
+                        <input type="date" name="return-date" id="return-date" required><br>
+                        <label for="class">Class:</label><br>
+                        <select name="class" id="class" required>
+                            <option value="economy">economy</option>
+                            <option value="first">first</option>
+                            <option value="business">business</option>
+                        </select><br>
+                        <label for="number_of_person">Number_of_persons:</label><br>
+                        <input type="number" class="no_of_persons" id="number_of_person" placeholder="number of persons" required><br>
+                        <button type="submit"><a href="{% url 'bkr' %}" id="flight-search"></a>Search</button>
+    
+    
+                    </form>
+                </div>
+               
+
+            </div>
+        </div>
+    </section>
+    
+        
+    
+    
+</body>
+</html>

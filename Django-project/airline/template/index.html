@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking System</title>
+    <script src="https://kit.fontawesome.com/e78313c283.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-items">
+                    <li class="item item1"><a href="#">Home</a></li>
+                    <li class="item item2"><a href="/about">About</a></li>
+                    <li class="item item3"><a href="/signin">User</a></li>
+                    <li class="item logo"><b>JJ</b><br><h2>Jetstream Journeys</h2></li>
+                    <li class="item item4"><a href="/admin">Admin</a></li>
+                    <li class="item item5"><a href="#contactus">Contact Us</a></li>
+                    <li class="item item6"><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="container1">
+                <div class="content">
+                    <h1 class="common-content">Travel the world</h1>
+                    
+                    <span id="element"></span>
+                </div>
+                <div class="bookinfo">
+                    <div class="bookinfo-detailcontainer">
+
+                        <div class="detail detail1">
+                            <h2 class="bookinfo-heading common-content">What we provide</h2>
+
+                        </div>
+                        
+                        <div class="detail detail2">
+                            <p class="blink common-content">Flight Booking </p></div>
+                        <div class="detail detail3"><p class="blink common-content">Hotel Booking</p></div>
+                        <div class="detail detail4"><p class="blink common-content">Holiday Packages</p></div>
+                        <div class="detail detail5"><p class="blink Login-link common-content"><a href="#">Login now to access our servives!!!</a></p></div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="poproutes">
+        <center><h1 class="poproutes-head"><B>POPULAR DESTINATIONS OF PEOPLE</B></h1></center>
+        <div class="containerflight">
+            <div class="popflight">
+                <div class="destination-container">
+                    <img src="/static/media/TAJ MAHAL.jpg" alt="TAJ">
+                    <div class="overlay destination-name">TAJ MAHAL</div>
+                </div>
+                
+            </div>
+            <div class="popflight">
+                <div class="destination-container">
+                    <img src="/static/media/PARIS.jpg" alt="PARIS">
+                    <div class="overlay destination-name">PARIS</div>
+                </div>
+                
+            </div>
+            <div class="popflight">
+                <div class="destination-container">
+                    <img src="/static/media/KOLKATA.jpg" alt="KOLKATA">
+                    <div class="destination-name">KOLKATA</div>
+                </div>
+                
+            </div>
+            <div class="popflight">
+                <div class="destination-container">
+                    <img src="/static/media/ITALY.jpg" alt="ITALY">
+                    <div class="destination-name">ITALY</div>
+                </div>
+               
+            </div>
+            <div class="popflight">
+                <div class="destination-container">
+                    <img src="/static/media/SCOTLAND.jpg" alt="SCOTLAND">
+                    <div class="destination-name">SCOTLAND</div>
+                </div>
+               
+            </div>
+            <div class="popflight">
+                <div class="destination-container">
+                    <img src="/static/media/USA.jpg" alt="USA">
+                    <div class="destination-name">USA</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <script src="/file.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> 
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Adventure awaits!!!!Book your journey to new horizons today <br>Discover places you ever dreamed of!', 'Escape the ordinary and embrace the extraordinary with our travel bookings.','Discover places you have only dreamed of. Book your escape now.'],
+          typeSpeed: 35,
+          loop: true,
+        });
+    </script>
+
+    {% extends 'contact.html' %}
+    {% block content1 %}
+    
+    {% endblock content1 %}
+
+
+    
+
+        
+      
+
+    
+    
+   
+</body>
+    
+</html>
+
+
+<!---->
+<!--onsubmit="return validateForm()"-->
